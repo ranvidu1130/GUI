@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* background: #f5f5f5 url('background-pattern.jpg') no-repeat center center; */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* .logo{
+    background-color: black;
+    height: 50px;
+    margin-top: 0px;
+    margin-left: 0px;
+  } */
+  
+  .container {
+    background-color: rgb(7, 5, 31);
+    /* background-image: url(signin_background.avif); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    
+  }
+  
+  .login-form {
+    background: #1c223899;
+    color: #ffffff;
+    padding: 30px;
+    padding-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  
+  }
+  
+  .login-form h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #68d391;
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+    text-align: left;
+    margin-right: 20px;
+  }
+  
+  .input-container label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+  }
+  
+  .captcha-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .captcha-container label {
+    margin-left: 10px;
+  }
+  
+  button {
+    background: #68d391;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background: #56b372;
+  }
+  
+  .forgot-password {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 0.85em;
+    color: #68d391;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .switch-login{
+    margin-top: 20px;
+    color: white;
+    
+  }
+
+  .error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
