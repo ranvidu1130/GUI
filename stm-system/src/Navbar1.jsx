@@ -12,15 +12,13 @@ function Navbar1() {
                 <a href="#home">
                 <img src={logo} alt="Avro Education Logo" />
                 </a>
-                <div class="name">AVRO EDUCATION CENTER</div>
+                <div className="name">AVRO EDUCATION CENTER</div>
             </div>
             
             {/* Right-aligned auth buttons */}
             <div className="auth-buttons">
-                {/* <Link to="../signin">Sign In</Link>
-                <Link to="../signup">Sign Up</Link> */}
-                <a href="./pages/signin">Sign In</a>
-                <a href="/signup">Sign Up</a>
+                <Link to="/signin">Sign In</Link>
+                <Link to="/signup">Sign Up</Link>
             </div>
         </div>
     );

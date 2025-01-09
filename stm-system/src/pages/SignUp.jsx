@@ -46,6 +46,10 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { Link } from 'react-router-dom';
+import Navbar1 from '../Navbar1';
+import Footer from "../Footer";
+
+
 
 
 function SignUp() {
@@ -106,6 +110,9 @@ function SignUp() {
     }
   };
   return (
+    <>
+    <Navbar1/>
+    <br /><br /><br />
     
     <div className="container">
       <div className="login-form">
@@ -180,6 +187,8 @@ function SignUp() {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

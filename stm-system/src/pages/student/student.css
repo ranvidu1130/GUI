@@ -1,6 +1,8 @@
+
+
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("pic.png");
+    /* background-image: url("stm-system/src/assets/pic.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffffff;
@@ -24,12 +26,7 @@ body {
     z-index: -1;
   }
   
-  .black_box {
-    background-color: #000330;
-    text-align: center;
-    color: aliceblue;
-    padding: 1%;
-  }
+  
   .topic {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
@@ -127,7 +124,7 @@ body {
   }
   /* ----------------------------------------------------------------------------------------- */
   .footer {
-    background-color: #000330;
+    background-color: #19023f;
     color: #fff;
     padding: 20px 0;
     font-family: Arial, sans-serif;
