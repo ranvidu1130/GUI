@@ -4,7 +4,7 @@ import { FaFacebook  } from "react-icons/fa";
 import { FaInstagram  } from "react-icons/fa";
 import { TiSocialYoutube } from "react-icons/ti";
 import { FaLinkedin } from "react-icons/fa";
-// import icon from "./icon.jpg";
+import logo from "./assets/logo.png";
 
 function Footer() {
   return (
@@ -29,11 +29,11 @@ function Footer() {
         </div>
         <div className="footer-logo">
           <h3>Avro Education</h3>
-          <img src={icon} alt="My Pic" style={{ width: "150px", height: "150px", borderRadius: "50%" }} />
+          <img src={logo} alt="My Pic" style={{ width: "150px", height: "150px", borderRadius: "50%" }} />
           <p>
-            Minotaur_1116@gmail.com <br />
+            avro@gmail.com <br />
             Contact us: +947163827363 <br />
-            &copy;Minotaur
+            &copy;AVROEDUCATION
           </p>
         </div>
 

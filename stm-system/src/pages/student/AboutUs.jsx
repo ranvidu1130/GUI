@@ -3,12 +3,21 @@ import "./student.css";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoBookOutline } from "react-icons/io5";
 import { SiGoogleclassroom } from "react-icons/si";
+import Footer from "../../Footer";
+import Navbar2 from "../../Navbar2";
+// import pic from "../../assets/pic.jpg";
+
+
+// const AboutUsStyle = {
+//   backgroundImage: `url(${pic})`
+// };
 
 function AboutUs() {
   return (
+    <>
+    <Navbar2 /> 
+    <br /><br /><br /><br />
     <div className="meow">
-      <div className="black_box">Nav Bar</div>
-      <br />
 
       <div className="topic">Avro Education</div>
       <br />
@@ -51,6 +60,8 @@ function AboutUs() {
         <button id="but3"><IoSearchSharp /> Explore</button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
