@@ -16,6 +16,8 @@ import SignUp from "./pages/SignUp";
 import AboutUs from './pages/student/AboutUs';
 import Footer from './Footer';
 import StudentDashboard from './pages/student/StudentDashboard';
+import StudentClasses from './pages/student/StudentClasses';
+import Classes from './pages/student/Classes';
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/studentdashboard" element={<StudentDashboard />}></Route>
         <Route path="/aboutus" element={<AboutUs />}></Route>
+        <Route path="/studentclasses" element={<StudentClasses />}></Route>
+        <Route path="/classes" element={<Classes />}></Route>
         
       </Routes>
     </BrowserRouter>

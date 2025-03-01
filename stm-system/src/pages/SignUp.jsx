@@ -180,9 +180,7 @@ function SignUp() {
           </div>
           <button type="submit">Sign Up</button>
           <div className="switch-login">
-            <a href="login.html" className="switch-login">
-              Already have an account? Log in
-            </a>
+              Already have an account?<Link to="/signin" >Log in</Link>
           </div>
         </form>
       </div>

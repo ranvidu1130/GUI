@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import Navbar1 from "../Navbar1";
 import Footer from "../Footer";
 import { useState } from "react";
+
+
+
 // function SignIn() {
 //   return (
 //     <>
@@ -29,7 +32,7 @@ import { useState } from "react";
 //                 <button type="submit">Login</button>
 //                 <a href="#" className="forgot-password">Forgot password?</a>
 
-//                 <Link to ="#"><button type="submit">Login as Admin</button></Link>
+                // <Link to ="#"><button type="submit">Login as Admin</button></Link>
 //             </form>
 //         </div>
 //     </div>
@@ -40,9 +43,7 @@ import { useState } from "react";
 
 // export default SignIn;
 
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import "./SignUp.css";
+
 
 function SignIn() {
   const [formData, setFormData] = useState({
@@ -134,6 +135,8 @@ function SignIn() {
             <Link to="/forgot-password" className="forgot-password">
               Forgot password?
             </Link>
+            {/* <Link to ="/admindashboard"><button type="submit">Login as Admin</button></Link> */}
+
           </form>
           <div className="switch-login">
             <p>
@@ -143,6 +146,7 @@ function SignIn() {
               </Link>
             </p>
           </div>
+          
         </div>
       </div>
       <Footer />

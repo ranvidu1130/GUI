@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+  background-image: url("../assets/pic.jpg");
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: -1;
+}
+.welcome-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header h1{
+  font-weight: bolder;
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+}
+
+.welcome-header p{
+  font-size: 18px;
+  color: rgb(207, 204, 204);
+}
+.welcome-header {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: rgba(0, 222, 251, 0.2);
+  backdrop-filter: blur(5px); 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Vision Section */
+.vision-section {
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  border-top: solid 2px #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+
+.vision-section h2 {
+  font-size: 2rem;
+  color: #00ff73;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.vision-section p {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Images Section */
+.images-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.welcome-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-header p {
+    font-size: 1.1rem;
+  }
+
+  .vision-section p {
+    font-size: 1rem;
+  }
+
+  .welcome-image {
+    width: 90%;
+    height: auto;
+  }
+}
