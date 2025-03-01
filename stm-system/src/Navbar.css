@@ -1,7 +1,7 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
+} */
 
 /* -------------------------------------------------------navbar css------------------------------------------------------- */
 
@@ -51,14 +51,15 @@ body {
 
 .navbar .nav-links {
     display: flex;
-    gap: 40px;
-    margin-left: 250px; 
+    gap: 48px;
+    /* margin-left: 250px;  */
     /* background-color: #575757; */
     
 }
 .navbar .nav-links a:hover  {
-    background-color: #575757;
-    border: 1px solid white;
+    background-color: #5757579d;
+    
+    
    
     
 
@@ -72,14 +73,23 @@ body {
 }
 
 .navbar .auth-buttons a {
-    border: 1px solid white;
-    padding: 15px 15px;
+    /* border: 1px solid white; */
+    padding: 10px 10px;
+
 }
 
+.navbar #auth-buttons a {
+    border: 1px solid white;
+}
 .navbar .auth-buttons a:hover {
     background-color: white;
     color: #19023f;
+    
 }
+.navbar #icon-color a:hover{
+    background-color:  white;
+}
+
 
 @media (max-width: 600px) {
     .navbar {
