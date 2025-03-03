@@ -14,7 +14,7 @@ function Footer() {
           <h4>Useful Links</h4>
           <ul>
             <li>
-              <a href="#about">About Us</a>
+              <a href="/aboutus">About Us</a>
             </li>
             <li>
               <a href="#services">Services</a>

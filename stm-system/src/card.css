@@ -1,10 +1,11 @@
 /* Card.css */
 .card {
-  width: 200px;
-  height: 250px;
-  padding: 20px;
-  margin: 20px;
+  width: 210px;
+  height: 280px;
+  padding: 10px;
+  margin: 14px;
   background-color: white;
+  
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -19,11 +20,12 @@
 .card-module-name {
   font-size: 1.2em;
   margin: 10px 0;
+  color: #000000;
 }
 
 .card-teacher-name {
   font-size: 0.9em;
-  color: #555;
+  color: #3f3a3a;
 }
 
 

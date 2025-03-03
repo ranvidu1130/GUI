@@ -11,17 +11,17 @@ function Navbar2() {
     <div className="navbar">
       {/* Logo Section */}
       <div className="logo">
-        <Link to="/Home">
+        <Link to="/studentdashboard">
           <img src={logo} alt="Avro Education Logo" />
         </Link>
-        {/* <div className="name">AVRO EDUCATION CENTER</div> */}
       </div>
 
       {/* Navigation Links */}
       <div className="nav-links" style={{marginRight:40,fontSize: 18}}>
         <Link to="/studentdashboard">Dashboard</Link>
-        <Link to="/studentclasses">Classes</Link>
-        <Link to="/classes">Enrolled Classes</Link>
+        <Link to="/classes"> Classes</Link>
+        <Link to="/enrolledclasses">Enrolled Classes</Link>
+
         <Link to="/aboutus">About Us</Link>
         
       </div>
