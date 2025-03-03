@@ -1,5 +1,4 @@
 import React from "react";
-// import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,16 +7,18 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import "./index.css";
-
-import Navbar1 from "./Navbar1";
-import Navbar2 from './Navbar2';
+import Home from "./pages/home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import AboutUs from './pages/student/AboutUs';
-import Footer from './Footer';
 import StudentDashboard from './pages/student/StudentDashboard';
-import StudentClasses from './pages/student/StudentClasses';
+import EnrolledClasses from './pages/student/EnrolledClasses';
 import Classes from './pages/student/Classes';
+
+
+// import Slideshow from './Slideshow';
+
+
 
 
 function App() {
@@ -25,27 +26,21 @@ function App() {
     
     <BrowserRouter>
       <Routes>
-        
-        <Route path="/" element={<SignIn />}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/studentdashboard" element={<StudentDashboard />}></Route>
-        <Route path="/aboutus" element={<AboutUs />}></Route>
-        <Route path="/studentclasses" element={<StudentClasses />}></Route>
         <Route path="/classes" element={<Classes />}></Route>
+        <Route path="/aboutus" element={<AboutUs />}></Route>
+        <Route path="/enrolledclasses" element={<EnrolledClasses/>}></Route>
+        
+        
         
       </Routes>
     </BrowserRouter>
 
-    // <Router>
-    // {/* <Navbar1 /> */}
-    //   <Routes>
-    //   <Route path="./pages/signin" element={<SignIn />} />
-    //   <Route path="./pages/signup" element={<SignUp />} />
-    //   {/* <Route path="./pages/signI" element={<Navbar1 />} /> */}
-    //   </Routes>
+    
 
-    // //   </Router>
-    // </div>
   );
 }
 

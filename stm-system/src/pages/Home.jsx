@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import Navbar1 from "../Navbar1";
 import Footer from "../Footer";
 
-import home1 from "../assets/home1.jpeg";
-import home2 from "../assets/home2.png";
-import home3 from "../assets/home3.jpeg";
-
 const Home = () => {
   return (
     <>
@@ -36,43 +32,19 @@ const Home = () => {
             better tomorrow.
           </p>
         </section>
-        {/* <br />
-        <br /> */}
-        {/* <section className="images-section">
-          <div className="slideshow-container">
-            <input type="radio" name="slide" id="slide1" defaultChecked />
-            <input type="radio" name="slide" id="slide2" />
-            <input type="radio" name="slide" id="slide3" />
-            <div className="slides">
-              <div className="slide s1">
-                <img
-                  src={home1}
-                  alt="Learning Made Simple"
-                  className="welcome-image"
-                />
-              </div>
-              <div className="slide s2">
-                <img
-                  src={home2}
-                  alt="Empowering Education"
-                  className="welcome-image"
-                />
-              </div>
-              <div className="slide s3">
-                <img
-                  src={home3}
-                  alt="Future Starts Here"
-                  className="welcome-image"
-                />
-              </div>
-            </div>
-            <div className="navigation-dots">
-              <label htmlFor="slide1" className="dot"></label>
-              <label htmlFor="slide2" className="dot"></label>
-              <label htmlFor="slide3" className="dot"></label>
-            </div>
-          </div>
-        </section> */}
+        <br />
+        <br />
+        <section className="vision-section">
+          <h2>Our Mission</h2>
+          <p>
+            Our mission is to provide high-quality, innovative, and accessible
+            education that fosters growth and success. We are committed to
+            creating a learning environment that inspires curiosity, creativity,
+            and excellence, and to guiding individuals on their journey of
+            lifelong learning and personal development.
+          </p>
+        </section>
+        <br />
       </div>
       <Footer />
     </>

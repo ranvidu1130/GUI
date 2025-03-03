@@ -29,12 +29,13 @@ function StudentDashboard() {
       </div>
 
       <h5>| Your Enrolled Classes</h5>
+      <br />
       <div className="my">
         <div className="cla" id="cla1">
           <img
             src={mat1}
             alt="My Pic"
-            style={{ width: "200px", height: "150px" }}
+            style={{ width: "180px", height: "150px" }}
           />
           <h4>Combined Maths</h4>
           <p>Eren Yeager</p>
@@ -44,7 +45,7 @@ function StudentDashboard() {
           <img
             src={mat2}
             alt="My Pic"
-            style={{ width: "200px", height: "150px" }}
+            style={{ width: "180px", height: "150px" }}
           />
           <h4>Applied Maths</h4>
           <p>Zeke Yeager</p>
@@ -54,7 +55,7 @@ function StudentDashboard() {
           <img
             src={chem}
             alt="My Pic"
-            style={{ width: "200px", height: "150px" }}
+            style={{ width: "180px", height: "150px" }}
           />
           <h4>Chemistry</h4>
           <p>Mikasa Ackermann</p>
@@ -64,7 +65,7 @@ function StudentDashboard() {
           <img
             src={phy}
             alt="My Pic"
-            style={{ width: "200px", height: "150px" }}
+            style={{ width: "180px", height: "150px" }}
           />
           <h4>Physics</h4>
           <p>Uzumaki Naruto</p>
@@ -72,7 +73,9 @@ function StudentDashboard() {
         </div>
       </div>
 
+      <br />
       <h5>| Upcoming Classes</h5>
+      <br />
       <div className="clzz">
         <div className="tim">
           2025.01.15 14:30 PM
