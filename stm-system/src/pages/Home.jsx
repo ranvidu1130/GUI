@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../pages/home.css";
 import { Link } from "react-router-dom";
 import Navbar1 from "../Navbar1";
 import Footer from "../Footer";
 
+import { AppContext } from "../AppContext";
+
 const Home = () => {
+  const { user, setUser } = useContext(AppContext);
   return (
     <>
       <Navbar1 />

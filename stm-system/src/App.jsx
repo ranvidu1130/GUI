@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
   BrowserRouter,
 } from "react-router-dom";
 import "./index.css";
@@ -14,35 +13,50 @@ import AboutUs from './pages/student/AboutUs';
 import StudentDashboard from './pages/student/StudentDashboard';
 import EnrolledClasses from './pages/student/EnrolledClasses';
 import Classes from './pages/student/Classes';
+import Profile from "./pages/Profile";
+import { AppProvider } from "./AppContext";
 
+// Create UserContext
+const UserContext = React.createContext();
 
-// import Slideshow from './Slideshow';
-
-
-
+// Custom hook to use the UserContext
+export const useUser = () => useContext(UserContext);
 
 function App() {
+  const [user, setUser] = useState({
+    name: "",
+    username: "",
+    course: "",
+  });
+
+  const login = (userData) => {
+    setUser(userData);
+  };
+
+  const logout = () => {
+    setUser({
+      name: "",
+      username: "",
+      course: "",
+    });
+  };
+
   return (
-    
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/signin" element={<SignIn />}></Route>
-        <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/studentdashboard" element={<StudentDashboard />}></Route>
-        <Route path="/classes" element={<Classes />}></Route>
-        <Route path="/aboutus" element={<AboutUs />}></Route>
-        <Route path="/enrolledclasses" element={<EnrolledClasses/>}></Route>
-        
-        
-        
-      </Routes>
-    </BrowserRouter>
-
-    
-
+        <BrowserRouter>
+          <AppProvider>
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/signin" element={<SignIn />}></Route>
+              <Route path="/signup" element={<SignUp />}></Route>
+              <Route path="/studentdashboard" element={<StudentDashboard />}></Route>
+              <Route path="/classes" element={<Classes />}></Route>
+              <Route path="/aboutus" element={<AboutUs />}></Route>
+              <Route path="/enrolledclasses" element={<EnrolledClasses />}></Route>
+              <Route path="/profile" element={<Profile />}></Route>
+            </Routes>
+          </AppProvider>
+        </BrowserRouter>
   );
 }
-
 
 export default App;
