@@ -155,12 +155,11 @@ import Footer from "../Footer";
 import axios from 'axios';  // Make sure to install axios if not already installed
 import { ToastContainer, toast } from 'react-toastify';
 
+
 function SignUp() {
+
   const [formData, setFormData] = useState({
-    name: "",
-    username: "",
-    email: "",
-    password: "",
+    ...user,
     confirmPassword: "",
   });
   const navigate = useNavigate();

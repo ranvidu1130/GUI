@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./student.css";
 import mat1 from "../../../src/assets/mat1.jpg";
 import mat2 from "../../../src/assets/mat2.jpg";
@@ -11,9 +11,10 @@ import { FaRegEye } from "react-icons/fa";
 import Navbar2 from "../../Navbar2";
 import Footer from "../../Footer";
 
+import { AppContext } from "../../AppContext";
 
 function StudentDashboard() {
-
+  const { user } = useContext(AppContext);
   return (
     <>
     <Navbar2 />
@@ -24,7 +25,7 @@ function StudentDashboard() {
         <div className="pro">
           <FaRegUserCircle />
         </div>
-        <div className="dis">Hello, Ranvidu Ariyarathne</div>
+        <div className="dis">Hello, {user.name}</div>
         <div className="ade">2025 A/L</div>
       </div>
 

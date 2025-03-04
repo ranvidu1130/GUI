@@ -110,15 +110,17 @@
 
 // export default SignIn;
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./SignUp.css";
 import { Link, useNavigate } from "react-router-dom";  // Using useHistory for programmatic navigation
 import Navbar1 from "../Navbar1";
 import Footer from "../Footer";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import { AppContext } from "../AppContext";
 
 function SignIn() {
+  const {setUser } = useContext(AppContext);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
@@ -167,6 +169,7 @@ function SignIn() {
         // If login is successful
         if (response.status === 200) {
           toast.success("Login successful!");
+          setUser(response.data);
           // Redirect to the student dashboard or another page after login
           setTimeout(() => {
             navigate("/studentdashboard");
