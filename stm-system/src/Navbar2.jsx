@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Navbar.css";
 import logo from "./assets/logo.png"
 import { Link } from 'react-router-dom';
@@ -8,8 +8,10 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
+import { AppContext } from "./AppContext";
 
 function Navbar2() {
+  const {setUser} = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -28,7 +30,7 @@ function Navbar2() {
         <Link to="/classes"> Classes</Link>
         <Link to="/enrolledclasses">Enrolled Classes</Link>
 
-        <Link to="/aboutus">About Us</Link>
+        <Link to= "/aboutus">About Us</Link>
         
       </div>
 
@@ -65,7 +67,10 @@ function Navbar2() {
                   Profile
                 </button>
                 <button
-                  onClick={() => console.log("Logout function here")}
+                  onClick={() => {
+                    setUser({});
+                    navigate("/")
+                  }}
                   className="dropdown-item logout-btn"
                 >
                   Logout

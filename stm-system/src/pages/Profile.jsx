@@ -7,9 +7,10 @@ import axios from 'axios';  // Make sure to install axios if not already install
 import { ToastContainer, toast } from 'react-toastify';
 
 import { AppContext } from "../AppContext";
+import { DiAppcelerator } from "react-icons/di";
 
 function Profile() {
-    const { user } = useContext(AppContext);
+    const { user, setUser } = useContext(AppContext);
     console.log(user)
   const [formData, setFormData] = useState({
     ...user,
@@ -63,9 +64,9 @@ function Profile() {
       
       try {
         // Send data to backend for registration
-        const response = await axios.post('http://localhost:3000/register', formData);
-        toast.success('Sign-up successful!', {});
-        console.log(response.data);
+        const response = await axios.put('http://localhost:3000/update-profile', formData);
+        toast.success('Update Profile Successful successful!');
+        setUser(response.data);
         setTimeout(() => {
           navigate("/studentdashboard");
         }, 2000);
@@ -76,6 +77,19 @@ function Profile() {
       }
     }
   };
+
+  const handdleDelete = async () => {
+    const req = await axios.delete(`http://localhost:3000/delete-user/${user.username}`)
+    if (req.status === 200) {
+      toast.success("User deleted successfully");
+      setUser({});
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+    } else {
+      toast.error("An error occurred while deleting user");
+    }
+  }
 
   return (
     <>
@@ -108,6 +122,7 @@ function Profile() {
                 value={formData.username}
                 onChange={handleChange}
                 required
+                readOnly
               />
               {errors.username && <p className="error">{errors.username}</p>}
             </div>
@@ -152,8 +167,8 @@ function Profile() {
 
             <br />
             <button type="submit">Update Profile</button>
-            <button id="delete btn" style={{position: "absolute", right:"20px",width:"200px"}}>Delete your accont</button>
           </form>
+            <button id="delete btn" style={{position: "absolute", right:"20px",width:"200px"}} onClick={() => handdleDelete()}>Delete your accont</button>
         </div>
        
       </div>

@@ -37,9 +37,9 @@ const sampleData = [
     teacherName: 'Emily Clark',
   },
   // Dynamically generate additional cards with unique data
-  ...Array.from({ length: 16 }, (_, index) => ({
+  ...Array.from({ length: 4 }, (_, index) => ({
     id: index + 5,
-    modulePicture: `../../../src/assets/mat2.jpg`,
+    modulePicture: `../../../src/assets/ictbb.jpg`,
     moduleName: `Custom Module ${index + 5}`,
     teacherName: `Teacher ${index + 5}`,
   })),
