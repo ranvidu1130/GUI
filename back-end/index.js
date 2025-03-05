@@ -31,6 +31,17 @@ app.post("/login", async (req, res) => {
         res.status(404).json({message: "user does not exist"});
     }
 })
+
+app.put("/update-profile", async (req, res) => {
+    const {name,username,email,password,confirmPassword} = req.body;
+    try {
+        const user = await prisma.user.update({data: {name,email,password,confirmpassword:confirmPassword}, where: {username}});
+        res.json(user);
+    } catch {
+        res.status(404).json({message: "user does not exist"});
+    }
+})
+
 app.delete("/delete/:id",async (req,res) => {
         const{ id } = req.params;
         try {
@@ -40,6 +51,18 @@ app.delete("/delete/:id",async (req,res) => {
         } catch {
             res.status(404).json({message: "user does not exist"});
         };   
+});
+
+app.delete("/delete-user/:username", async (req, res) => {
+    const { username } = req.params;
+    try {
+        const user = await prisma.user.delete({
+            where: { username },
+        });
+        res.json({ message: "User deleted successfully", user });
+    } catch (error) {
+        res.status(404).json({ message: "User does not exist" });
+    }
 });
 
 

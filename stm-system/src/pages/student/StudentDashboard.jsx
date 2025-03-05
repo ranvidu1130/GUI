@@ -39,7 +39,8 @@ function StudentDashboard() {
             style={{ width: "180px", height: "150px" }}
           />
           <h4>Combined Maths</h4>
-          <p>Eren Yeager</p>
+          <p>Dileep kasthuriarachchi</p>
+          <br />
           <button><FaRegEye />  View</button>
         </div>
         <div className="cla" id="cla2">
@@ -49,7 +50,9 @@ function StudentDashboard() {
             style={{ width: "180px", height: "150px" }}
           />
           <h4>Applied Maths</h4>
-          <p>Zeke Yeager</p>
+          <p>Udula Ranvidu Ariyarathna</p>
+
+          <br />
           <button><FaRegEye />  View</button>
         </div>
         <div className="cla" id="cla3">
@@ -59,7 +62,8 @@ function StudentDashboard() {
             style={{ width: "180px", height: "150px" }}
           />
           <h4>Chemistry</h4>
-          <p>Mikasa Ackermann</p>
+          <p>stephanie Wijayawardana</p>
+          <br />
           <button><FaRegEye />  View</button>
         </div>
         <div className="cla" id="cla4">
@@ -69,7 +73,8 @@ function StudentDashboard() {
             style={{ width: "180px", height: "150px" }}
           />
           <h4>Physics</h4>
-          <p>Uzumaki Naruto</p>
+          <p>P.Yoganadhan Murugesan</p>
+          <br />
           <button><FaRegEye />  View</button>
         </div>
       </div>
@@ -79,26 +84,26 @@ function StudentDashboard() {
       <br />
       <div className="clzz">
         <div className="tim">
-          2025.01.15 14:30 PM
+          2025.03.15 14:30 PM
         </div>
         <div className="claname">Combined Maths</div>
-        <div className="clate">Eren Yeager</div>
+        <div className="clate">Dileep kasthuriarachchi</div>
         <div className="join"><button><TiTick /> Join Now</button></div>
       </div>
       <div className="clzz">
         <div className="tim">
-          2025.01.15 18:00 PM
+          2025.03.18 18:00 PM
         </div>
         <div className="claname">Chemistry</div>
-        <div className="clate">Mikasa Ackermann</div>
+        <div className="clate">stephanie Wijayawardana</div>
         <div className="join"><button><TiTick /> Join Now</button></div>
       </div>
       <div className="clzz">
         <div className="tim">
-          2025.01.15 21:00 PM
+          2025.03.18 14:00 PM
         </div>
         <div className="claname">Physics</div>
-        <div className="clate">Uzumaki Naruto</div>
+        <div className="clate">P.Yoganadhan Murugesan</div>
         <div className="join"><button><TiTick /> Join Now</button></div>
       </div>
     </div>

@@ -147,19 +147,23 @@
 
 // export default SignUp;
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./SignUp.css";
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar1 from '../Navbar1';
 import Footer from "../Footer";
 import axios from 'axios';  // Make sure to install axios if not already installed
 import { ToastContainer, toast } from 'react-toastify';
+import { AppContext } from "../AppContext";
 
 
 function SignUp() {
-
+  const { setUser } = useContext(AppContext);
   const [formData, setFormData] = useState({
-    ...user,
+    name: "",
+    username: "",
+    email: "",
+    password: "",
     confirmPassword: "",
   });
   const navigate = useNavigate();
@@ -211,6 +215,7 @@ function SignUp() {
       try {
         // Send data to backend for registration
         const response = await axios.post('http://localhost:3000/register', formData);
+        setUser(response.data);
         toast.success('Sign-up successful!', {});
         console.log(response.data);
         setTimeout(() => {
