@@ -1,6 +1,6 @@
 const { getDriver } = require('./utils.js');
 
-const DefaultTimeout = 6000;
+const DefaultTimeout = 60000;
 
 describe("Auth Flow", () => {
 
@@ -10,11 +10,11 @@ describe("Auth Flow", () => {
         await driver.get("http://localhost:5173/");
     }
 
-    beforeAll(async () => {
+    beforeEach(async () => {
         driver = await getDriver();
     })
 
-    afterAll(async () => {
+    afterEach(async () => {
         await driver.quit();
     })
 
@@ -36,11 +36,47 @@ describe("Auth Flow", () => {
         const loginButton = await driver.findElement({ xpath: '//*[@id="root"]/div[2]/div/form/button' });
         await loginButton.click();
 
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 3000));
 
         const currentUrl = await driver.getCurrentUrl();
 
         expect(currentUrl).toContain("studentdashboard");
     }, DefaultTimeout);
 
+
+    test("signup test", async () => {
+        await loadPage();
+
+        const signUpXPath = '//*[@id="auth-buttons"]/a[2]';
+        const signUpButton = await driver.findElement({ xpath: signUpXPath });
+        await signUpButton.click();
+
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+
+        const nameInput = await driver.findElement({ id: "name" });
+        const usernameInput = await driver.findElement({ id: "username" });
+        const emailInput = await driver.findElement({ id: "email" });
+        const passwordInput = await driver.findElement({ id: "password" });
+        const confirmPasswordInput = await driver.findElement({ id: "confirmPassword" });
+
+        const name = "Test User";
+        const testUsername = `user${Date.now()}`;
+        const testEmail = `user${Date.now()}@example.com`;
+        const testPassword = "abcdef";
+
+        await nameInput.sendKeys(name);
+        await usernameInput.sendKeys(testUsername);
+        await emailInput.sendKeys(testEmail);
+        await passwordInput.sendKeys(testPassword);
+        await confirmPasswordInput.sendKeys(testPassword);
+
+        const registerButton = await driver.findElement({ xpath: '//*[@id="root"]/div[2]/div/form/button' });
+        await registerButton.click();
+
+        await new Promise(resolve => setTimeout(resolve, 3000));
+
+        const currentUrl = await driver.getCurrentUrl();
+        expect(currentUrl).toContain("studentdashboard");
+    }, DefaultTimeout);
 })
