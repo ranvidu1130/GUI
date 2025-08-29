@@ -6,7 +6,7 @@ export default {
     "node_modules/(?!axios)/"
   ],
   testEnvironment: "node",
-  extensionsToTreatAsEsm: [".jsx", ".js", ".mjs"],
+  extensionsToTreatAsEsm: [".jsx", ".mjs"],
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1"
   }
