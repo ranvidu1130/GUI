@@ -1,5 +1,3 @@
-import { expect } from 'chai';
-
 // Input validation functions
 const validateRegistration = (userData) => {
     const errors = {};
@@ -62,12 +60,12 @@ describe('Authentication Unit Tests', () => {
             
             const errors = validateRegistration(invalidUser);
             
-            expect(errors).to.not.be.null;
-            expect(errors).to.have.property('email');
-            expect(errors).to.have.property('password');
-            expect(errors).to.have.property('confirmPassword');
-            expect(errors.email).to.equal('Invalid email format');
-            expect(errors.confirmPassword).to.equal('Passwords do not match');
+            expect(errors).not.toBeNull();
+            expect(errors).toHaveProperty('email');
+            expect(errors).toHaveProperty('password');
+            expect(errors).toHaveProperty('confirmPassword');
+            expect(errors.email).toBe('Invalid email format');
+            expect(errors.confirmPassword).toBe('Passwords do not match');
         });
 
         it('should properly evaluate password strength', () => {
@@ -79,18 +77,18 @@ describe('Authentication Unit Tests', () => {
             const strongResult = checkPasswordStrength(strongPassword);
             
             // Test weak password
-            expect(weakResult.isStrong).to.be.false;
-            expect(weakResult.score).to.be.lessThan(4);
+            expect(weakResult.isStrong).toBe(false);
+            expect(weakResult.score).toBeLessThan(4);
             
             // Test strong password
-            expect(strongResult.isStrong).to.be.true;
-            expect(strongResult.score).to.equal(5);
+            expect(strongResult.isStrong).toBe(true);
+            expect(strongResult.score).toBe(5);
             
             // Test specific requirements
-            expect(/[A-Z]/.test(strongPassword)).to.be.true; // Has uppercase
-            expect(/[a-z]/.test(strongPassword)).to.be.true; // Has lowercase
-            expect(/[0-9]/.test(strongPassword)).to.be.true; // Has number
-            expect(/[!@#$%^&*]/.test(strongPassword)).to.be.true; // Has special char
+            expect(/[A-Z]/.test(strongPassword)).toBe(true); // Has uppercase
+            expect(/[a-z]/.test(strongPassword)).toBe(true); // Has lowercase
+            expect(/[0-9]/.test(strongPassword)).toBe(true); // Has number
+            expect(/[!@#$%^&*]/.test(strongPassword)).toBe(true); // Has special char
         });
     });
 });
