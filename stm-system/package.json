@@ -8,7 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "test:api": "jest tests/api",
+    "test:unit": "jest tests/unit",
+    "test:e2e": "jest tests/selenium --runInBand"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -34,6 +37,7 @@
     "jest": "^30.1.1",
     "mocha": "^11.7.1",
     "selenium-webdriver": "^4.35.0",
+    "supertest": "^7.1.4",
     "vite": "^6.0.5"
   }
 }
